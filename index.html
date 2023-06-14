@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <div ng-app="passwordStrength" ng-controller="levelsCtrl">
+    <input type="password" ng-model="password" ng-change="updatePasswordStrength()" required>
+    <div class="indicator" ng-class="{'small': level=='small', 'easy': level=='easy', 'medium': level=='medium', 'hard': level=='hard'}"></div>
+    <div class="indicator" ng-class="{'small': level=='small', 'medium': level=='medium', 'hard': level=='hard'}"></div>
+    <div class="indicator" ng-class="{'small': level=='small',  'hard': level=='hard'}"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
